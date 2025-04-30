@@ -82,10 +82,10 @@ No additional dependencies are required since this is a manual build process. At
 For easier automation of the build process, you can use the following bash script.
 
 Ensure the script has execute permissions:
-    chmod +x build.sh
+    `chmod +x build.sh`
 
 Run the script once the build.sh is ready:
-    ./build.sh
+    `./build.sh`
 
 ### `build.sh`:
 
@@ -93,6 +93,12 @@ Run the script once the build.sh is ready:
 #!/bin/bash
 
 # Build script for QR Code Offline Firefox Add-on
+
+# Ensure the 'zip' utility is installed
+if ! command -v zip &> /dev/null; then
+    echo "Error: 'zip' command not found. Please install zip and try again."
+    exit 1
+fi
 
 # Ensure we're in the correct directory
 if [ ! -d "QRCodeOffline" ]; then
