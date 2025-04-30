@@ -30,7 +30,7 @@ QRCodeOffline/
 │   └── logo.png
 └── README.md
 
-Note: This can also be directly downloaded from [My public GitHub repository](https://github.com/LIPEKT/QRCodeOffline).
+Note: This can also be directly downloaded from my public [GitHub repository](https://github.com/LIPEKT/QRCodeOffline).
 
 ---
 
