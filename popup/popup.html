@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Code Offline</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>QR Code Offline</h1>
+    
+    <div id="qrcode" class="qrcode"></div>
+    
+    <input type="text" id="textInput" placeholder="Ou adicione seu texto customizado aqui..." />
+    
+    <div class="buttons">
+      <button id="generateBtn">Gerar QR</button>
+      <button id="downloadBtn">Baixar QR</button>
+    </div>
+  </div>
+
+  <script src="../lib/qrcode.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
