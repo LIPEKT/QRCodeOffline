@@ -3,7 +3,7 @@
 This is a Firefox add-on that generates QR codes from the current website or custom text input, and works offline. It does not require an internet connection once installed.
 
 ## Table of Contents
-0. [File Structure] (#file-structure)
+0. [File Structure](#file-structure)
 1. [Build Instructions](#build-instructions)
 2. [Requirements](#requirements)
 3. [Build Script](#build-script)
@@ -81,6 +81,12 @@ No additional dependencies are required since this is a manual build process. At
 
 For easier automation of the build process, you can use the following bash script.
 
+Ensure the script has execute permissions:
+    chmod +x build.sh
+
+Run the script once the build.sh is ready:
+    ./build.sh
+
 ### `build.sh`:
 
 ```bash
@@ -104,10 +110,3 @@ echo "Extension packaged as QRCodeOffline.zip"
 
 # Done
 echo "Build process complete. You can now test the .zip file."
-```
-
-Ensure the script has execute permissions:
-    chmod +x build.sh
-
-Run the script:
-    ./build.sh
