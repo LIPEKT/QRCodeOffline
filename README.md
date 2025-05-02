@@ -4,9 +4,8 @@ This is a Firefox add-on that generates QR codes from the current website or cus
 
 ## Table of Contents
 0. [File Structure](#file-structure)
-1. [Build Instructions](#build-instructions)
+1. [Usage Instructions](#usage-instructions)
 2. [Requirements](#requirements)
-3. [Build Script](#build-script)
 
 ---
 
@@ -34,7 +33,7 @@ Note: This can also be directly downloaded from my public [GitHub repository](ht
 
 ---
 
-## Build Instructions
+## Usage Instructions
 
 ### 1. Clone or Download the Repository
 Clone the repository or download the source code to your local machine.
@@ -50,69 +49,11 @@ Ensure all source files are present in the project:
 
 Note: **qrcode.min.js** is included directly from [QRCode.js GitHub repository](https://github.com/davidshimjs/qrcodejs/blob/master/qrcode.min.js).
 
-### 3. Set up the Build Environment
-Make sure your build environment matches the following:
-- **Operating System**: Ubuntu 22.04 (other Linux-based systems should work, but I never tested it to guarantee 100%)
-- **No special dependencies** are required, as the source code does not use any build tools such as npm or Webpack. However, make sure `zip` is available/installed to create the package.
-
-### 4. Package the Extension
-To package the extension, follow these steps:
-1. Open your Terminal in the root directory of the project.
-2. Run the following instructions to create a `.zip` file:
-    ```bash
-    zip -r QRCodeOffline.zip ./* -x "*.git*" -x "*.DS_Store"
-    ```
-    This will create a `QRCodeOffline.zip` file, excluding unwanted files like `.git` or system files (`.DS_Store`) just in case.
-
 ---
 
 ## Requirements
 
-- **Operating System**: Ubuntu 22.04 (other Linux-based Ubuntu systems may work)
-- **Browser**: Firefox (latest stable version)
-- **Tools**:
-  - `zip` for packaging the extension. This is typically pre-installed on Ubuntu.
+- **Operating System**: Any one is fine (as long as it can run a browser.)
+- **Browser**: Firefox (latest stable version) and Microsoft Edge (also last stable version)
 
-No additional dependencies are required since this is a manual build process. At least I built it this way pretty quickly since I just created the files, and compressed it through the terminal once I got to the /local/where/the/files/are.
-
----
-
-## Build Script
-
-For easier automation of the build process, you can use the following bash script.
-
-Ensure the script has execute permissions:
-    `chmod +x build.sh`
-
-Run the script once the build.sh is ready:
-    `./build.sh`
-
-### `build.sh`:
-
-```bash
-#!/bin/bash
-
-# Build script for QR Code Offline Firefox Add-on
-
-# Ensure the 'zip' utility is installed
-if ! command -v zip &> /dev/null; then
-    echo "Error: 'zip' command not found. Please install zip and try again."
-    exit 1
-fi
-
-# Ensure we're in the correct directory
-if [ ! -d "QRCodeOffline" ]; then
-    echo "Error: QRCodeOffline directory not found!"
-    exit 1
-fi
-
-cd QRCodeOffline
-
-# Create the zip file excluding git and system files
-echo "Packaging the extension..."
-zip -r QRCodeOffline.zip ./* -x "*.git*" -x "*.DS_Store"
-
-echo "Extension packaged as QRCodeOffline.zip"
-
-# Done
-echo "Build process complete. You can now test the .zip file."
+No additional dependencies are required.
