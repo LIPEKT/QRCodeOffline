@@ -3,33 +3,8 @@
 This is a Firefox add-on that generates QR codes from the current website or custom text input, and works offline. It does not require an internet connection once installed.
 
 ## Table of Contents
-0. [File Structure](#file-structure)
 1. [Usage Instructions](#usage-instructions)
 2. [Requirements](#requirements)
-
----
-
-## File Structure
-
-QRCodeOffline/
-├── manifest.json
-├── background/
-│   └── background.js
-├── popup/
-│   ├── popup.html
-│   ├── popup.js
-│   └── popup.css
-├── icons/
-│   ├── icon-16.png
-│   ├── icon-48.png
-│   └── icon-96.png
-├── lib/
-│   └── qrcode.min.js
-├── assets/
-│   └── logo.png
-└── README.md
-
-Note: This can also be directly downloaded from my public [GitHub repository](https://github.com/LIPEKT/QRCodeOffline).
 
 ---
 
